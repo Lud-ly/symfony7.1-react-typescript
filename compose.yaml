@@ -17,7 +17,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: pma_techartisan_generic
+    container_name: pma_mozartui
     links:
       - database
     environment:
@@ -26,6 +26,6 @@ services:
       PMA_ARBITRARY: 1
     restart: always
     ports:
-      - 8085:80
+      - 8083:80
 volumes:
   dbdata:
