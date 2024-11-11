@@ -62,7 +62,10 @@ DirectoryIndex index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ %{ENV:BASE}/index.php [L]
 </IfModule>
-
+<FilesMatch "\.(env|git|svn)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
 <IfModule !mod_rewrite.c>
     <IfModule mod_alias.c>
         # When mod_rewrite is not available, we instruct a temporary redirect of
