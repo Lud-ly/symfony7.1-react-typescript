@@ -1,3 +1,4 @@
+.PHONY: deploy install
 deploy:
 	ssh -i ~/.ssh/id_ed25519 pw2zpk_ludom@pw2zpk.ftp.infomaniak.com 'cd sites/info.devlm.fr && git pull --rebase origin main && make install'
 
