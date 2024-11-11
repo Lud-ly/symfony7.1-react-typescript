@@ -1,6 +1,7 @@
 .PHONY: deploy install
 deploy:
-	ssh -i ~/.ssh/id_ed25519 pw2zpk_ludom@pw2zpk.ftp.infomaniak.com 'cd sites/info.devlm.fr && git pull origin main && make install'
+	@echo "Executing make install..."
+	ssh -i ~/.ssh/id_ed25519 pw2zpk_ludom@pw2zpk.ftp.infomaniak.com 'cd sites/info.devlm.fr && git pull --rebase origin main && make install'
 install: vendor/autoload.php
 	/opt/php8.2/bin/php bin/console d:m:m -n
 	/opt/php8.2/bin/composer dump-env prod
