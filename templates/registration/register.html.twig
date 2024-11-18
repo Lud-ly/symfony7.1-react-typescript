@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    {% include '_partials/_flash.html.twig' %}
+    <div class="container">
+        <div class="form-side">
+            <div class="register-container">
+                {% for flash_error in app.flashes('verify_email_error') %}
+                    <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                {% endfor %}
+
+                <h1>INSCRIPTION</h1>
+                <div class="links-container">
+                    <a href="{{ path('app_login') }}" class="already-link">Déjà inscrit ?</a>
+                    <a href="{{ path('app_home') }}" class="already-link">Retour à l'accueil</a>
+                </div>
+
+                {{ form_errors(registrationForm) }}
+                {{ form_start(registrationForm, {'attr': {'class': 'form-register'}}) }}
+                    <div class="form-row">
+                        {{ form_label(registrationForm.username) }}
+                        {{ form_widget(registrationForm.username, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(registrationForm.username) }}
+                    </div>
+
+                    <div class="form-row">
+                        {{ form_label(registrationForm.email) }}
+                        {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(registrationForm.email) }}
+                    </div>
+
+                    <div class="form-row">
+                        {{ form_label(registrationForm.plainPassword) }}
+                        {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(registrationForm.plainPassword) }}
+                    </div>
+
+                    <div class="form-row">
+                        {{ form_label(registrationForm.agreeTerms) }}
+                        {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input'}}) }}
+                        {{ form_errors(registrationForm.agreeTerms) }}
+                    </div>
+
+                    <button type="submit" class="btn">S'inscrire</button>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+
+        <div class="image-side">
+            <div class="background-image"></div>
+        </div>
+    </div>
+{% endblock %}

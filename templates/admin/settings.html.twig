@@ -1,0 +1,14 @@
+{# templates/admin/settings.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Paramètres Admin{% endblock %}
+
+{% block body %}
+    <div {{ react_component('SettingsController', {
+            users: users, 
+            username: app.user.username 
+            })
+        }}>
+        </div>
+{% endblock %}

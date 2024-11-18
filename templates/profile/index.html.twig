@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+    {% include '_partials/_flash.html.twig' %}
+    {% if app.user %}
+        {% set username = app.user.username %}  
+        <div {{ react_component('ProfileController',{
+            username: username
+            })
+        }}>
+        </div>
+    {% else %}
+        <p>Veuillez vous connecter.</p>
+    {% endif %}
+{% endblock %}

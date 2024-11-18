@@ -33,6 +33,7 @@ class CreateUserCommand extends Command
     {
         $this
             ->setDescription('Creates a new user.')
+            ->addArgument('email', InputArgument::REQUIRED, 'The email of the user.')
             ->addArgument('username', InputArgument::REQUIRED, 'The username of the user.')
             ->addArgument('password', InputArgument::REQUIRED, 'The password of the user.');
     }
@@ -40,16 +41,15 @@ class CreateUserCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $user = new User();
-        $user->setEmail($input->getArgument('username'));
+        $user->setEmail($input->getArgument('email'));
+        $user->setUsername($input->getArgument('username'));
 
         // Hashage du mot de passe
         $hashedPassword = $this->passwordHasher->hashPassword($user, $input->getArgument('password'));
         $user->setPassword($hashedPassword);
 
-        // Attribution d'un rôle
-        $user->setRoles(['ROLE_ADMIN']);
+        $user->setRoles(['ROLE_USER','ROLE_ADMIN','ROLE_VERIFIED']);
 
-        // Persistance de l'utilisateur en base de données
         $this->entityManager->persist($user);
         $this->entityManager->flush();
 

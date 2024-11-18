@@ -1,0 +1,32 @@
+{# templates/security/access_denied.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Accès Refusé{% endblock %}
+
+{% block body %}
+ 
+    <div class="center-page">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">Accès Refusé pour l'utilisateur {{ app.user.username }}</h3>
+            </div>
+            <div class="card-body">
+                <div class="my-4">
+                    <i class="fas fa-exclamation-triangle fa-3x text-danger mb-3"></i>
+                    <h4 class="text-danger">Vous n'avez pas les permissions nécessaires</h4>
+                    <p class="lead">Désolé, vous n'avez pas l'autorisation d'accéder à cette page.</p>
+                    <p class="lead">Contactez l'administrateur du site pour obtenir de l'aide.</p>
+                </div>
+
+                <div class="mt-4">
+                    <a href="{{ path('app_home') }}" class="btn btn-primary"> 
+                       Retour à l'accueil
+                    </a>
+                    <a href="{{ path('app_logout') }}">
+                       Se déconnecter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

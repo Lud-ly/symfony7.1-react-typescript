@@ -204,7 +204,7 @@ export const app = startStimulusApp(require.context(
 # Command for user creation
 
 - Created a Symfony Console command to create users with email and password.
-- Passwords are hashed, and users are assigned the `ROLE_ADMIN` role by default.
+- Passwords are hashed, and users are assigned the `ROLE_ADMIN` role by default if command used.
 - Usage: 
 
 ```bash

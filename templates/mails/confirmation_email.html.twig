@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation de votre email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .expiration {
+            color: #666666;
+            font-size: 14px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eeeeee;
+            text-align: center;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue ! Confirmez votre adresse email</h1>
+        
+        <p>Merci de vous être inscrit ! Pour finaliser votre inscription et accéder à votre compte, veuillez confirmer votre adresse email.</p>
+        
+        <div style="text-align: center;">
+            <a href="{{ signedUrl|raw }}" class="btn">Confirmer mon email</a>
+        </div>
+        
+        <p class="expiration">Ce lien expirera dans {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.</p>
+        
+        <div class="signature">
+            <p>Cordialement,<br>L'équipe DEVLM</p>
+        </div>
+    </div>
+</body>
+</html>
