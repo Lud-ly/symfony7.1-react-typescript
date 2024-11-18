@@ -48,7 +48,7 @@ class CreateUserCommand extends Command
         $hashedPassword = $this->passwordHasher->hashPassword($user, $input->getArgument('password'));
         $user->setPassword($hashedPassword);
 
-        $user->setRoles(['ROLE_USER','ROLE_ADMIN','ROLE_VERIFIED']);
+        $user->setRoles(['ROLE_USER','ROLE_ADMIN','ROLE_VERIFIED'])->setVerified(true);
 
         $this->entityManager->persist($user);
         $this->entityManager->flush();
