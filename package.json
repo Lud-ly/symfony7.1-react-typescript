@@ -36,6 +36,7 @@
     "@mui/material": "^6.1.7",
     "@mui/styles": "^6.1.7",
     "@mui/system": "^6.1.7",
+    "or": "^0.2.0",
     "react-simple-code-editor": "^0.13.1"
   }
 }
