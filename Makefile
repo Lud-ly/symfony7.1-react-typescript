@@ -17,7 +17,7 @@ vendor/autoload.php: composer.json composer.lock
 
 npm-install:
 	@echo "Installing NPM dependencies..."
-	npm install --legacy-peer-deps  # Utilisez --legacy-peer-deps si vous rencontrez des problèmes avec les versions de dépendances
+	npm install --legacy-peer-deps
 	make build
 
 build:
