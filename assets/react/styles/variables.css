@@ -2,13 +2,14 @@
     --bg-color: #000000;
     --bg-color-btn: #007bff;
     --black: #000000;
-    --light-black: #111111;
+    --light-black: #121212;
     --white: #ffffff;
     ---highlight-grey: #dddddd;
     --lightgrey: #cccccc;
     --oldwhite: antiquewhite;
     --blue: #0056b3;
     --muted-color: #6c757d;
+    --hover-black: #1c1a1a;
     --hover-muted-color: #5a6268;
 
     /* Badges */
