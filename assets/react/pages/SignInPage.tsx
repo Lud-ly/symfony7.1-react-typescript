@@ -155,11 +155,6 @@ export default function SignInPage({ csrfToken, error }: SignInProps) {
               </form>
             </Stack>
           </Box>
-          <Box component="footer" sx={{ py: 3 }}>
-            <Typography level="body-xs" sx={{ textAlign: 'center' }}>
-              © DevLM {new Date().getFullYear()}
-            </Typography>
-          </Box>
         </Box>
       </Box>
       <Box
@@ -171,7 +166,7 @@ export default function SignInPage({ csrfToken, error }: SignInProps) {
           bottom: 0,
           left: { xs: 0, md: '50vw' },
           transition:
-            'bgi-login var(--Transition-duration), left var(--Transition-duration) !important',
+            'background-image var(--Transition-duration), left var(--Transition-duration) !important',
           transitionDelay: 'calc(var(--Transition-duration) + 0.1s)',
           backgroundColor: 'background.level1',
           backgroundSize: 'cover',
