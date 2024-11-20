@@ -57,7 +57,6 @@ export default function Header({ username }: HeaderProps) {
                 <ColorSchemeToggle />
                 <IconLinkButton
                     href="/logout"
-                    label="Déconnexion"
                     icon={<Logout color="secondary" />}
                     txtSize="12px"
                 />

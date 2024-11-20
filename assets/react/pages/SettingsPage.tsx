@@ -2,7 +2,7 @@ import * as React from 'react';
 import { CssVarsProvider } from '@mui/joy/styles';
 import Box from '@mui/joy/Box';
 import CssBaseline from '@mui/joy/CssBaseline';
-import framesxTheme from '../Theme';
+import framesxTheme from '../theme/Theme';
 import ColorSchemeToggle from '../components/ui/ColorSchemeToggle';
 import CustomBottomNavigation from '../components/ui/CustomBottomNavigation';
 import '../styles/app.css';

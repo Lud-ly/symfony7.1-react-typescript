@@ -57,7 +57,7 @@ export default function TwoSidedLayout({
         sx={(theme) => ({
           minWidth: 300,
           transition:
-            'background-image var(--Transition-duration), left var(--Transition-duration) !important',
+            'bgi-login var(--Transition-duration), left var(--Transition-duration) !important',
           transitionDelay: 'calc(var(--Transition-duration) + 0.1s)',
           alignSelf: 'stretch',
           [theme.breakpoints.up(834)]: {

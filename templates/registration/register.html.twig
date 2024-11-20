@@ -5,13 +5,13 @@
 {% block body %}
     {% include '_partials/_flash.html.twig' %}
     <div class="container">
-        <div class="form-side">
+        <div class="form-side-connexion">
             <div class="register-container">
                 {% for flash_error in app.flashes('verify_email_error') %}
                     <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
                 {% endfor %}
 
-                <h1>INSCRIPTION</h1>
+                <h2 class="title">INSCRIPTION</h1>
                 <div class="links-container">
                     <a href="{{ path('app_login') }}" class="already-link">Déjà inscrit ?</a>
                     <a href="{{ path('app_home') }}" class="already-link">Retour à l'accueil</a>
@@ -48,8 +48,8 @@
             </div>
         </div>
 
-        <div class="image-side">
-            <div class="background-image"></div>
+        <div class="image-side-login">
+            <div class="bgi-login"></div>
         </div>
     </div>
 {% endblock %}

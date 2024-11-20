@@ -1,0 +1,47 @@
+:root {
+    --bg-color: #000000;
+    --bg-color-btn: #007bff;
+    --black: #000000;
+    --light-black: #111111;
+    --white: #ffffff;
+    ---highlight-grey: #dddddd;
+    --lightgrey: #cccccc;
+    --oldwhite: antiquewhite;
+    --blue: #0056b3;
+    --muted-color: #6c757d;
+    --hover-muted-color: #5a6268;
+
+    /* Badges */
+    --badge-primary: #9b77ff;   
+    --badge-success: #77d9b8;   
+    --badge-warning: #f9d66e;   
+    --badge-danger: #f8a1c4;    
+    --badge-secondary: #a1a9c3; 
+
+    /* Success Alerts */
+    --alert-success-bg: #d4edda;
+    --alert-success-text: #155724;
+    --alert-success-border: #c3e6cb;
+
+    /* Warning Alerts */
+    --alert-warning-bg: #fff3cd;
+    --alert-warning-text: #856404;
+    --alert-warning-border: #ffeeba;
+
+    /* Danger Alerts */
+    --alert-danger-bg: #f8d7da;
+    --alert-danger-text: #721c24;
+    --alert-danger-border: #f5c6cb;
+
+    /* Info Alerts */
+    --alert-info-bg: #d1ecf1;
+    --alert-info-text: #0c5460;
+    --alert-info-border: #bee5eb;
+
+    /* Transition */
+    --Transition-duration: '0.4s';
+
+    /* Font Size */
+    --title: 2.5rem;
+    --subtile: 1.5rem;
+}

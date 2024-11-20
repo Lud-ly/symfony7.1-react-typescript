@@ -1,0 +1,34 @@
+.badge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+.badge-primary {
+    background-color: var(--badge-primary);
+    color: var(--white);
+}
+
+.badge-success {
+    background-color: var(--badge-success);
+    color: var(--white);
+}
+
+.badge-warning {
+    background-color: var(--badge-warning);
+    color: var(--white);
+}
+
+.badge-secondary {
+    background-color: var(--badge-secondary);
+    color: var(--white);
+}

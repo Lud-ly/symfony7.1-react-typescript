@@ -4,31 +4,27 @@
 
 {% block body %}
 
-    <div class="verification-container">
-        <div class="verification-card">
-            <h3 class="card-title">Vérification de votre Email Requise</h3>
+    <div class="wrapper">
+        <div class="card">
+            <a href="{{ path('app_main') }}" class="backsizedbtn">
+            ⬅️
+            </a>
+            <h3 class="card-title">Vérification de compte Devlm</h3> 
 
-            {% for message in app.flashes('warning') %}
-                <div class="alert alert-warning">
+            {% for message in app.flashes('info') %}
+                <div class="alert alert-info">
                     {{ message }}
                 </div>
             {% endfor %}
 
-            <div class="content">
-                <p class="icon">📧</p>
+            <div class="card-body">
                 <p class="lead">Pour accéder à cette page, vous devez d'abord vérifier votre adresse email.</p>
                 <p>Un email de confirmation vous a été envoyé lors de votre inscription.</p>
             </div>
 
             <div class="actions">
-                <p class="text-muted">Vous n'avez pas reçu l'email de confirmation ?</p>
-                <a href="{{ path('app_verify_email', { id: user.id, resend: 'true' }) }}" class="btn btn-primary">Renvoyer l'email de confirmation</a>
-            </div>
-
-            <hr class="divider">
-
-            <div class="logout">
-                <a href="{{ path('app_logout') }}" class="btn btn-secondary">Se déconnecter</a>
+                <p class="text-muted">Vous n'avez pas reçu l'email ?</p>
+                <a href="{{ path('app_verify_email', { id: user.id, resend: 'true' }) }}" class="btn-primary">Renvoyer l'email de confirmation</a>
             </div>
         </div>
     </div>

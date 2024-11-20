@@ -171,7 +171,7 @@ export default function SignInPage({ csrfToken, error }: SignInProps) {
           bottom: 0,
           left: { xs: 0, md: '50vw' },
           transition:
-            'background-image var(--Transition-duration), left var(--Transition-duration) !important',
+            'bgi-login var(--Transition-duration), left var(--Transition-duration) !important',
           transitionDelay: 'calc(var(--Transition-duration) + 0.1s)',
           backgroundColor: 'background.level1',
           backgroundSize: 'cover',

@@ -31,6 +31,7 @@ export default function ColorSchemeToggle() {
         sx={{
           borderRadius: '50%',
           boxShadow: 'sm',
+          margin: 1
         }}
       >
         {mode === 'light' ? <DarkModeRoundedIcon /> : <LightModeRoundedIcon />}

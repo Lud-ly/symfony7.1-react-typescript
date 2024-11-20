@@ -1,0 +1,19 @@
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--lightgrey);
+  background-color: var(--black);
+  margin-top: 5px;
+  color: var(--white);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--bg-color-btn);
+  outline: none;
+}

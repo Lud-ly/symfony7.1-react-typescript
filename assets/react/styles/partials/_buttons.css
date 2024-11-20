@@ -1,0 +1,46 @@
+button[type="submit"].btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: var(--bg-color-btn);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"].btn:hover {
+  background-color: var(--blue);
+}
+
+.btn-primary {
+  background-color: var(--bg-color-btn);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--blue);
+}
+
+.btn-secondary {
+  background-color: var(--muted-color);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--hover-muted-color);
+}
+
+.btn {
+  margin: 0.5rem;
+  background-color: transparent;
+  color: var(--white);
+}
+.backsizedbtn {
+  font-size: 2rem;
+}

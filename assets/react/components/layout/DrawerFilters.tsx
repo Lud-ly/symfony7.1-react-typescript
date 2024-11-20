@@ -74,7 +74,7 @@ export default function DrawerFilters() {
           <DialogContent sx={{ gap: 2 }}>
             <FormControl>
               <FormLabel sx={{ typography: 'title-md', fontWeight: 'bold' }}>
-                Property type
+                Type de rôle
               </FormLabel>
               <RadioGroup
                 value={type || ''}
@@ -91,19 +91,19 @@ export default function DrawerFilters() {
                 >
                   {[
                     {
-                      name: 'House',
+                      name: 'Utilisateur classique',
                       icon: <HomeRoundedIcon />,
                     },
                     {
-                      name: 'Apartment',
+                      name: 'Utilisateur authenticateur',
                       icon: <ApartmentRoundedIcon />,
                     },
                     {
-                      name: 'Guesthouse',
+                      name: 'Utilisateur administrateur',
                       icon: <MeetingRoomRoundedIcon />,
                     },
                     {
-                      name: 'Hotel',
+                      name: 'Utitilisateur modérateur',
                       icon: <HotelRoundedIcon />,
                     },
                   ].map((item) => (
@@ -148,7 +148,7 @@ export default function DrawerFilters() {
             </FormControl>
 
             <Typography level="title-md" sx={{ fontWeight: 'bold', mt: 1 }}>
-              Amenities
+              Pouvoir
             </Typography>
             <div role="group" aria-labelledby="rank">
               <List
@@ -156,7 +156,7 @@ export default function DrawerFilters() {
                 size="sm"
                 sx={{ '--List-gap': '12px', '--ListItem-radius': '20px' }}
               >
-                {['Wi-fi', 'Washer', 'A/C', 'Kitchen'].map((item, index) => {
+                {['Crooner','Ingenieur', 'Geek', 'Programmeur', 'Moldue'].map((item, index) => {
                   const selected = amenities.includes(index);
                   return (
                     <ListItem key={item}>
@@ -203,12 +203,12 @@ export default function DrawerFilters() {
             </div>
 
             <Typography level="title-md" sx={{ fontWeight: 'bold', mt: 2 }}>
-              Booking options
+              Rôles options
             </Typography>
             <FormControl orientation="horizontal">
               <Box sx={{ flex: 1, pr: 1 }}>
                 <FormLabel sx={{ typography: 'title-sm' }}>
-                  Instant booking
+                  Instant role option
                 </FormLabel>
                 <FormHelperText sx={{ typography: 'body-sm' }}>
                   Listings that you can book without waiting for host approval.
@@ -245,7 +245,7 @@ export default function DrawerFilters() {
             >
               Clear
             </Button>
-            <Button onClick={() => setOpen(false)}>Show 165 properties</Button>
+            <Button onClick={() => setOpen(false)}>Show 16 user(s)</Button>
           </Stack>
         </Sheet>
       </Drawer>

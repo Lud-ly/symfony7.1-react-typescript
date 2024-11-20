@@ -1,0 +1,23 @@
+.card {
+  background-color: var(--light-black);
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid var(--highlight-grey);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}

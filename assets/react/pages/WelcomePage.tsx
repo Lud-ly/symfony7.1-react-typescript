@@ -3,7 +3,7 @@ import { CssVarsProvider } from '@mui/joy/styles';
 import Box from '@mui/joy/Box';
 import CssBaseline from '@mui/joy/CssBaseline';
 
-import framesxTheme from '../Theme';
+import framesxTheme from '../theme/Theme';
 import Hero from '../components/layout/Hero';
 import ColorSchemeToggle from '../components/ui/ColorSchemeToggle';
 

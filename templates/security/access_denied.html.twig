@@ -1,29 +1,46 @@
-{# templates/security/access_denied.html.twig #}
 {% extends 'base.html.twig' %}
 
 {% block title %}Accès Refusé{% endblock %}
 
 {% block body %}
- 
-    <div class="center-page">
+    {% set badgeClasses = {
+        'ROLE_USER': 'badge-primary',
+        'ROLE_VERIFIED': 'badge-success',
+        'ROLE_ADMIN': 'badge-warning',
+        'ROLE_MODERATOR': 'badge-secondary'
+    } %}
+    <div class="wrapper">
         <div class="card">
             <div class="card-header">
-                <h3 class="mb-0">Accès Refusé pour l'utilisateur {{ app.user.username }}</h3>
+                <p class="card-title">Désolé  {{ app.user.username }}, vous n'avez pas l'autorisation d'accéder à cette page.</p>
+                <p>Rôle(s) actuel(s) :</p>
+               <div class="badge-container">
+                    {% for role in app.user.roles %}
+                        {% set badgeClass = badgeClasses[role] is defined ? badgeClasses[role] : 'badge-primary' %}
+                        <span class="badge {{ badgeClass }}">
+                            {% if role == 'ROLE_USER' %}
+                                Rôle utilisateur
+                            {% elseif role == 'ROLE_VERIFIED' %}
+                                Compte vérifié
+                            {% elseif role == 'ROLE_ADMIN' %}
+                                Administrateur
+                            {% elseif role == 'ROLE_MODERATOR' %}
+                                Modérateur
+                            {% else %}
+                                {{ role }}
+                            {% endif %}
+                        </span>
+                    {% endfor %}
+                </div>
             </div>
             <div class="card-body">
                 <div class="my-4">
-                    <i class="fas fa-exclamation-triangle fa-3x text-danger mb-3"></i>
-                    <h4 class="text-danger">Vous n'avez pas les permissions nécessaires</h4>
-                    <p class="lead">Désolé, vous n'avez pas l'autorisation d'accéder à cette page.</p>
-                    <p class="lead">Contactez l'administrateur du site pour obtenir de l'aide.</p>
+                    <p class="text-muted">Contactez l'administrateur du site pour obtenir de l'aide.</p>
                 </div>
 
-                <div class="mt-4">
-                    <a href="{{ path('app_home') }}" class="btn btn-primary"> 
+                <div class="links-container">
+                    <a href="{{ path('app_main') }}" class="btn-secondary"> 
                        Retour à l'accueil
-                    </a>
-                    <a href="{{ path('app_logout') }}">
-                       Se déconnecter
                     </a>
                 </div>
             </div>

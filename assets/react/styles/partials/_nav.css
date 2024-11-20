@@ -1,0 +1,14 @@
+/* Bottom Navigation */
+.bottomNavigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: var(--joy-palette-background-paper); 
+  border-top: 1px solid var(--joy-palette-divider);
+  z-index: 10;
+}

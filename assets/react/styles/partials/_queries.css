@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+
+    /* global */
+    body {
+        font-size: 1.2rem;
+    }
+
+    .wrapper {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /*badge */
+    .badge {
+        font-size: 1.175rem;
+    }
+
+    /* Card */
+    .card {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 32px;
+    }
+
+    .card-body p {
+        font-size: 1.2rem;
+    }
+
+    /*text*/
+    .text-muted {
+        font-size: 1.2rem;
+    }
+
+    /*btn*/
+    .btn-secondary {
+        font-size: x-large;
+    }
+    .form-row label{
+        font-size: 12px;
+    }
+}

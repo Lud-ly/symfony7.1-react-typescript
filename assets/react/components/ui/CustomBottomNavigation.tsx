@@ -13,44 +13,35 @@ export default function CustomBottomNavigation() {
             setValue(0);
         } else if (path === '/app/profile') {
             setValue(1);
-        }
-        else if (path === '/app/admin/settings') {
+        } else if (path === '/app/admin/settings') {
             setValue(2);
         }
     }, []);
 
     return (
         <Box
-            className="bottomNavigation"
-            sx={{
-                display: 'flex',
-                justifyContent: 'space-around',
-                alignItems: 'center',
-                height: '128px',
-                backgroundColor: 'background.paper',
-            }}
-        >
-            <DrawerFilters />
+            className="bottomNavigation">
             <IconLinkButton
                 href="/app"
-                icon={<Home color={value === 0 ? 'primary' : 'secondary'} />}
-                txtSize="sm"
-                iconSize='xl'
-                onClick={() => setValue(0)}
-            />
-            <IconLinkButton
-                href="/app/profile"
-                icon={<Person2Outlined color={value === 1 ? 'primary' : 'secondary'} />}
+                icon={<Home color={value === 0 ? 'primary' : 'inherit'} />}
                 txtSize="sm"
                 iconSize="xl"
-                onClick={() => setValue(2)}
+                onClick={() => setValue(0)}
             />
+            <DrawerFilters />
             <IconLinkButton
-                href="/app/admin/settings"
-                icon={<Settings color={value === 2 ? 'primary' : 'secondary'} />}
+                href="/app/profile"
+                icon={<Person2Outlined color={value === 1 ? 'primary' : 'inherit'} />}
                 txtSize="sm"
                 iconSize="xl"
                 onClick={() => setValue(1)}
+            />
+            <IconLinkButton
+                href="/app/admin/settings"
+                icon={<Settings color={value === 2 ? 'primary' : 'inherit'} />}
+                txtSize="sm"
+                iconSize="xl"
+                onClick={() => setValue(2)}
             />
         </Box>
     );
