@@ -14,7 +14,7 @@ import Typography from '@mui/joy/Typography';
 import Stack from '@mui/joy/Stack';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
 import ColorSchemeToggle from '../components/ui/ColorSchemeToggle';
-import { SignInProps } from '../types/LmSignInProps';
+import { SignInProps } from '../types/types';
 import GoogleIcon from '../components/icons/GoogleIcon';
 
 export default function SignInPage({ csrfToken, error }: SignInProps) {

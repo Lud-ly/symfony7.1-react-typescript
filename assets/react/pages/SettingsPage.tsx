@@ -3,23 +3,12 @@ import { CssVarsProvider } from '@mui/joy/styles';
 import Box from '@mui/joy/Box';
 import CssBaseline from '@mui/joy/CssBaseline';
 import framesxTheme from '../theme/Theme';
-import ColorSchemeToggle from '../components/ui/ColorSchemeToggle';
 import CustomBottomNavigation from '../components/ui/CustomBottomNavigation';
 import '../styles/app.css';
 import Table from '@mui/joy/Table';
 import Header from '../components/base/Header';
+import { SettingsPageProps } from '../types/types';
 
-interface User {
-    id: number;
-    username: string;
-    email: string;
-    roles: string[];
-}
-
-interface SettingsPageProps {
-    users: User[];
-    username: string;
-}
 
 export default function SettingsPage({ users, username }: SettingsPageProps) {
     if (!users || users.length === 0) {

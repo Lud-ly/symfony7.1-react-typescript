@@ -11,3 +11,25 @@ export interface LmIconButtonProps {
     bgColor?: string;
     onClick?: () => void;
   }
+
+  export interface SignInProps {
+    csrfToken: string;
+    error: string | null;
+  }
+  
+  export interface MainPageProps {
+    username: string;
+    title: string;
+}
+
+export interface User {
+  id: number;
+  username: string;
+  email: string;
+  roles: string[];
+}
+
+export interface SettingsPageProps {
+  users: User[];
+  username: string;
+}

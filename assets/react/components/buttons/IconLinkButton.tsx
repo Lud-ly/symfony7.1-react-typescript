@@ -2,7 +2,7 @@ import React from 'react';
 import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import { ColorPaletteProp } from '@mui/joy';
-import { LmIconButtonProps } from '../../types/LmIconButtonProps';
+import { LmIconButtonProps } from '../../types/types';
 
 export default function CustomIconButton({
   href,

@@ -1,17 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Symfony React{% endblock %}
+{% block title %}InfoDevLm{% endblock %}
 
 {% block body %}
     {% include '_partials/_flash.html.twig' %}
-    {% if app.user %}
-        {% set username = app.user.username %}  
-        <div {{ react_component('MainController',{
-            username: username
-            })
-        }}>
-        </div>
-    {% else %}
-        <p>Veuillez vous connecter.</p>
-    {% endif %}
+
+    <div 
+        {{ react_component('MainController',
+        { username: app.user.username , title: global_title }
+        ) }}
+    >
+    </div>
 {% endblock %}
