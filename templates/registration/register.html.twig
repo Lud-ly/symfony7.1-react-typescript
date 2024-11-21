@@ -3,20 +3,37 @@
 {% block title %}Inscription{% endblock %}
 
 {% block body %}
-    {% include '_partials/_flash.html.twig' %}
-    <div class="container">
+    <div class="registration-container">
         <div class="form-side-connexion">
             <div class="register-container">
                 {% for flash_error in app.flashes('verify_email_error') %}
                     <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
                 {% endfor %}
 
-                <h2 class="title">INSCRIPTION</h1>
-                <div class="links-container">
+                <h3 class="title">Inscription</h3>
+                <div class="links-container"> 
                     <a href="{{ path('app_login') }}" class="already-link">Déjà inscrit ?</a>
                     <a href="{{ path('app_home') }}" class="already-link">Retour à l'accueil</a>
                 </div>
+                <div class="button-container">
+                    <button class="compact-button neutral">
+                        <span class="icon-google">
+                            <!-- Icône Google -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="16px" height="16px">
+                                <path fill="#EA4335" d="M24 9.5c3.24 0 5.95 1.08 8.1 2.86l6.04-6.04C34.54 3.18 29.63 1 24 1 14.95 1 7.1 6.48 3.9 14.05l7.08 5.5C12.74 12.67 17.88 9.5 24 9.5z"/>
+                                <path fill="#34A853" d="M46.5 24c0-1.69-.14-3.32-.41-4.91H24v9.33h12.66c-.55 2.9-2.16 5.37-4.52 7.03v5.84h7.31C44.88 37.68 46.5 31.18 46.5 24z"/>
+                                <path fill="#4A90E2" d="M11.98 28.8L4.91 34.3C8.67 41.68 15.8 46.5 24 46.5c6.5 0 12.08-2.15 16.09-5.86l-7.31-5.84c-2.16 1.45-4.88 2.3-7.78 2.3-6.02 0-11.15-4.07-12.98-9.54z"/>
+                                <path fill="#FBBC05" d="M11.98 28.8C11.07 26.73 10.5 24.44 10.5 22c0-2.44.57-4.73 1.48-6.8L4.91 9.7C2.77 13.41 1.5 17.53 1.5 22c0 4.47 1.27 8.59 3.41 12.3l7.07-5.5z"/>
+                            </svg>
+                        </span>
+                        Continuer avec Google
+                    </button>
+                </div>
 
+                <div class="orbe">
+                    or
+                <hr>
+                </div>
                 {{ form_errors(registrationForm) }}
                 {{ form_start(registrationForm, {'attr': {'class': 'form-register'}}) }}
                     <div class="form-row">
@@ -37,13 +54,12 @@
                         {{ form_errors(registrationForm.plainPassword) }}
                     </div>
 
-                    <div class="form-row">
+                    <div class="form-row terms-row">
                         {{ form_label(registrationForm.agreeTerms) }}
                         {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input'}}) }}
-                        {{ form_errors(registrationForm.agreeTerms) }}
                     </div>
 
-                    <button type="submit" class="btn">S'inscrire</button>
+                    <button type="submit" class="btn-oulined">S'inscrire</button>
                 {{ form_end(registrationForm) }}
             </div>
         </div>

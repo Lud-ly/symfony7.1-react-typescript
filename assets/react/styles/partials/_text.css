@@ -1,7 +1,6 @@
  .title {
    color: var(--white);
-   font-size: var(--title);
-   text-align: center;
+   font-size: x-large;
  }
 
  .subtitle {
@@ -11,4 +10,10 @@
 
  .text-muted {
    color: var(--muted-color);
+ }
+ .orbe{
+  font-size: small;
+  color: var(--white);
+  text-align: center;
+  margin: 30px;
  }

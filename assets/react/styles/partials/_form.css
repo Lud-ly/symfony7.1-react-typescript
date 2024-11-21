@@ -2,7 +2,18 @@
   margin-bottom: 20px;
 }
 .form-row label {
-  font-weight: bold;
   margin-bottom: 5px;
+  color: var(--white);
 }
 
+.form-row.terms-row {
+  display: flex;
+  align-items: center;
+}
+
+.form-row.terms-row input[type="checkbox"] {
+  margin-right: 10px;
+}
+.terms-row{
+  font-size: small;
+}

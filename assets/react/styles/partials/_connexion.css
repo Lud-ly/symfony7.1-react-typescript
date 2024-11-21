@@ -1,28 +1,85 @@
-.form-side-connexion {
-  flex: 1;
-  padding: 40px;
+.registration-container {
+  display: flex;
+  height: 100vh;
+}
+
+.login-header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 0.25rem;
 }
 
-.image-side-login {
-  flex: 1;
-  position: relative;
-  height: 100vh;
-  width: 100%;
+.login-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
-.bgi-login {
-  background-image: url('https://images.unsplash.com/photo-1572072393749-3ca9c8ea0831?auto=format&w=1000&dpr=2');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
+.register-prompt {
+  font-size: 0.875rem;
+}
+
+.register-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+      flex-direction: row;
+  }
+  
+  .form-side-connexion {
+      background-color: var(--black);
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+  }
+  
+  .image-side-login {
+      width: 50%;
+      position: relative;
+  }
+  
+  .bgi-login {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1572072393749-3ca9c8ea0831?auto=format&w=1000&dpr=2');
+      background-size: cover;
+      background-position: center;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .registration-container {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+  }
+  
+  .image-side-login {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(5px);
+      background-image: url('https://images.unsplash.com/photo-1572072393749-3ca9c8ea0831?auto=format&w=1000&dpr=2');
+      background-size: cover;
+      background-position: center;
+  }
+  
+  .form-side-connexion {
+      position: relative;
+      min-height: min-content;
+      z-index: 1;
+      margin: 2rem;
+      border-radius: 10px;
+  }
 }

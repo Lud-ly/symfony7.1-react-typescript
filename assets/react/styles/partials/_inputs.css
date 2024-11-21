@@ -5,7 +5,6 @@ textarea {
   padding: 10px;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid var(--lightgrey);
   background-color: var(--black);
   margin-top: 5px;
   color: var(--white);
